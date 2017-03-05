@@ -1,0 +1,40 @@
+{
+  "name": "reactprojectfromscratch",
+  "version": "1.0.0",
+  "description": "Step by Step React + Typescript + Webpack",
+  "main": "index.tsx",
+  "scripts": {
+    "build": "SET NODE_ENV=production && webpack --watch --colors",
+    "start": "SET NODE_ENV=production && webpack-dev-server --progress --colors",
+    "styleguide-server": "styleguidist server",
+    "styleguide-build": "styleguidist build"
+  },
+  "author": "Antonio Muñoz Torres",
+  "license": "ISC",
+  "dependencies": {
+    "@types/react": "^15.0.14",
+    "@types/react-dom": "^0.14.23",
+    "moment": "^2.17.1",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "awesome-typescript-loader": "^3.0.8",
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "babel-preset-react": "^6.23.0",
+    "glob": "^7.1.1",
+    "html-webpack-plugin": "^2.28.0",
+    "react-docgen": "^2.13.0",
+    "react-docgen-typescript": "0.0.1",
+    "react-styleguidist": "^4.6.3",
+    "source-map-loader": "^0.1.6",
+    "ts-loader": "^2.0.1",
+    "tsc": "^1.20150623.0",
+    "tslint": "^4.5.1",
+    "tslint-react": "^2.4.0",
+    "typescript": "^2.2.1",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1"
+  }
+}
