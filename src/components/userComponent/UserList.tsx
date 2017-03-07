@@ -5,6 +5,7 @@
 import * as React from 'react';
 import User from '../../model/User';
 import UserListView from './UserListView';
+const styles = require('../../MessageApp.css');
 
 /***
  *  Descripcion interface UserList
@@ -26,8 +27,8 @@ export class UserList extends React.Component<UserListProps, {}> {
     render() {
 
         return(
-            <div className="threadList">
-                <ul className="list">
+            <div className={styles.threadList}>
+                <ul className={styles.list}>
                     {this.props.users.map((user) => <UserListView key={user.id} {...user}/> )}
                 </ul>
             </div>

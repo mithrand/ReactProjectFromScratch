@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const BUILD_DIR = 'build';
 const PUBLIC_DIR = 'public';
 const HTML_TEMPLATE_FILE = 'index.html';
-
+const modulesDir = 'node_modules';
 
 module.exports = {
   entry: "./src/index.tsx",
@@ -30,10 +30,7 @@ module.exports = {
         test: /\.(jsx)$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
-        query:
-          {
-            presets:['react']
-          }
+        query:{presets:['react']}
       },
       {
         test: /\.tsx$/,
@@ -45,7 +42,19 @@ module.exports = {
         test: /\.js$/,
         use: ["source-map-loader"],
         enforce: "pre"
-      }
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader','css-loader?importLoaders=1','postcss-loader']
+      },
+      { test: /\.css$/,
+        include: path.join(modulesDir, 'jquery-ui'),
+        loader: 'style-loader!css-loader'
+      },
+      { test: /\.css$/,
+        include: path.join(modulesDir, 'font-awesome', 'css'),
+        loader: 'style-loader!css-loader'
+      },
     ]
   },
   plugins: [

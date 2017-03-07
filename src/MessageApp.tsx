@@ -3,8 +3,8 @@ import * as moment from 'moment';
 import {User} from './model/User';
 import Message from './model/Message';
 import UserList from './components/userComponent/UserList';
-import ChatWindow from './components/chatComponet/ChatWindow';
-
+import ChatWindow from './components/chatComponent/ChatWindow';
+let styles = require('./MessageApp.css');
 
 /***
  *  Aplicacion de mensajes
@@ -36,10 +36,7 @@ class MessageApp extends React.Component<null, null> {
 
     render() {
         return (
-          <div className="App">
-            <div className="App-header">
-              <h2>Welcome to React</h2>
-            </div>
+          <div className={styles.container}>
             <UserList
                 users={this.getUsers()}
             />

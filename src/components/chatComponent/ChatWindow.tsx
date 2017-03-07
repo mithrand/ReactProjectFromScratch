@@ -7,6 +7,7 @@ import User from '../../model/User';
 import * as React from 'react';
 import ChatHeader from './ChatHeader';
 import {ChatMessage, ChatMessageProps} from './ChatMessage';
+const styles = require('../../MessageApp.css');
 
 export interface ChatWindowProps {
     messages: Message[];
@@ -53,7 +54,7 @@ export class ChatWindow extends React.Component<ChatWindowProps, {}> {
 
     render() {
         return (
-            <div className="chat">
+            <div className={styles.chat}>
                 <ChatHeader
                     key={this.props.with.id}
                     {...this.props.with}

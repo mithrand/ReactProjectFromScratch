@@ -18,13 +18,12 @@
     "noUnusedLocals": true
   },
   "exclude": [
-    "node_modules",
     "build",
-    "scripts",
-    "acceptance-tests",
-    "webpack",
-    "jest",
-    "src/setupTests.ts"
+    "node_modules",
+    "public",
+    "release",
+    "styleguide",
+    "./*.js"
   ],
   "types": [
     "typePatches"

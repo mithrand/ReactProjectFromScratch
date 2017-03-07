@@ -5,6 +5,7 @@
 import * as React from 'react';
 import Message from '../../model/Message';
 import User from '../../model/User';
+const styles = require('../../MessageApp.css');
 
 export class ChatMessageProps {
     message: Message;
@@ -23,9 +24,9 @@ export class ChatMessage extends React.Component< ChatMessageProps, {}> {
 
     render() {
         return (
-            <div className="message">
+            <div className={styles.message}>
                 <div className="">
-                    <span className="messageDataName">{this.props.from.userName}</span>
+                    <span className={styles.messageDataName}>{this.props.from.userName}</span>
                 </div>
                 <div className="">
                     {this.props.message.text}

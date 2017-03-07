@@ -3,7 +3,9 @@
  */
 
 import * as React from 'react';
+
 import User from '../../model/User';
+let styles = require('../../MessageApp.css');
 
 export class ChatHeader extends React.Component<User, {}> {
 
@@ -18,8 +20,8 @@ export class ChatHeader extends React.Component<User, {}> {
         return(
             <div className="chatHeader">
                 <img src={this.props.avatar} className="avatar" alt={this.props.userName} />
-                <div className="chatAbout">
-                    <div className="chatWith">Chat with {this.props.userName}</div>
+                <div className={styles.chatAbout}>
+                    <div className={styles.chatWith}>Chat with {this.props.userName}</div>
                 </div>
                 <div />
             </div>
